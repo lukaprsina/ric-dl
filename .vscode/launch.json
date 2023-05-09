@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'matura'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=matura",
+                    "--package=matura"
+                ],
+                "filter": {
+                    "name": "matura",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'matura'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=matura",
+                    "--package=matura"
+                ],
+                "filter": {
+                    "name": "matura",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
