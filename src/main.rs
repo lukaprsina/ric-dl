@@ -6,7 +6,7 @@ use url::Url;
 
 fn main() -> Result<(), Box<dyn Error>> {
     let browser = Browser::new(LaunchOptions {
-        headless: false,
+        // headless: false,
         ..Default::default()
     })?;
 
